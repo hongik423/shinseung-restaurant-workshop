@@ -1576,4 +1576,182 @@ window.addEventListener('load', function() {
 
 🚀 즐거운 학습되세요!
     `);
+});
+
+// 실습 섹션 기능
+let currentPracticeStep = 'setup';
+
+// 실습 네비게이션 기능
+function switchPracticeStep(stepName) {
+    // 모든 단계 숨기기
+    const allSteps = document.querySelectorAll('.practice-step');
+    allSteps.forEach(step => step.classList.remove('active'));
+    
+    // 모든 네비게이션 버튼 비활성화
+    const allNavBtns = document.querySelectorAll('.practice-nav-btn');
+    allNavBtns.forEach(btn => btn.classList.remove('active'));
+    
+    // 선택된 단계 표시
+    const targetStep = document.getElementById(`step-${stepName}`);
+    const targetBtn = document.querySelector(`[data-step="${stepName}"]`);
+    
+    if (targetStep && targetBtn) {
+        targetStep.classList.add('active');
+        targetBtn.classList.add('active');
+        currentPracticeStep = stepName;
+    }
+}
+
+// 실습 네비게이션 이벤트 리스너 추가
+document.addEventListener('DOMContentLoaded', function() {
+    const practiceNavBtns = document.querySelectorAll('.practice-nav-btn');
+    practiceNavBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const stepName = this.getAttribute('data-step');
+            switchPracticeStep(stepName);
+        });
+    });
+});
+
+// 코드 복사 기능
+function copyCode(button) {
+    const codeBlock = button.closest('.code-block');
+    const code = codeBlock.querySelector('code');
+    
+    if (code) {
+        // 텍스트 선택 및 복사
+        const textArea = document.createElement('textarea');
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        // 버튼 피드백
+        const originalText = button.textContent;
+        button.textContent = '복사됨!';
+        button.style.background = '#4caf50';
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '';
+        }, 2000);
+    }
+}
+
+// 실습 단계 실행
+function executeStep(stepName) {
+    const stepMessages = {
+        'setup': '환경설정 단계를 시작합니다!\n\n1. Node.js가 설치되어 있는지 확인하세요\n2. 프로젝트 폴더를 생성하세요\n3. 기본 파일들을 만들어보세요',
+        'html': 'HTML 구조 작성을 시작합니다!\n\n1. index.html 파일을 열어주세요\n2. 기본 HTML 구조를 작성하세요\n3. 헤더와 네비게이션을 추가하세요',
+        'css': 'CSS 스타일 적용을 시작합니다!\n\n1. css/style.css 파일을 열어주세요\n2. 기본 스타일을 적용하세요\n3. 반응형 디자인을 구현하세요',
+        'js': 'JavaScript 기능 추가를 시작합니다!\n\n1. js/script.js 파일을 열어주세요\n2. 모바일 메뉴 기능을 추가하세요\n3. 스크롤 이벤트를 구현하세요',
+        'deploy': '배포 과정을 시작합니다!\n\n1. Git 저장소를 초기화하세요\n2. GitHub에 코드를 업로드하세요\n3. Vercel로 배포하세요'
+    };
+    
+    alert(stepMessages[stepName] || '단계를 실행합니다!');
+    
+    // 진행률 업데이트
+    updatePracticeProgress(stepName);
+}
+
+// AI 프롬프트 모달 표시
+function showPrompt(stepName) {
+    const modal = document.getElementById('prompt-modal');
+    const allPromptSteps = document.querySelectorAll('.prompt-step');
+    
+    // 모든 프롬프트 단계 숨기기
+    allPromptSteps.forEach(step => step.classList.remove('active'));
+    
+    // 해당 단계 프롬프트 표시
+    const targetPrompt = document.getElementById(`prompt-${stepName}`);
+    if (targetPrompt) {
+        targetPrompt.classList.add('active');
+    }
+    
+    // 모달 표시
+    modal.classList.add('active');
+}
+
+// 프롬프트 모달 닫기
+function closePrompt() {
+    const modal = document.getElementById('prompt-modal');
+    modal.classList.remove('active');
+}
+
+// 실습 진행률 업데이트
+function updatePracticeProgress(stepName) {
+    const stepOrder = ['setup', 'html', 'css', 'js', 'deploy'];
+    const currentIndex = stepOrder.indexOf(stepName);
+    
+    if (currentIndex !== -1) {
+        // 로컬 스토리지에 진행상황 저장
+        const practiceProgress = JSON.parse(localStorage.getItem('practiceProgress') || '{}');
+        practiceProgress[stepName] = true;
+        localStorage.setItem('practiceProgress', JSON.stringify(practiceProgress));
+        
+        // 진행률 표시 업데이트
+        const completedSteps = Object.keys(practiceProgress).length;
+        const totalSteps = stepOrder.length;
+        const progressPercentage = (completedSteps / totalSteps) * 100;
+        
+        // 진행률 원형 차트 업데이트
+        const progressCircle = document.querySelector('.circle');
+        const percentageText = document.querySelector('.percentage');
+        
+        if (progressCircle && percentageText) {
+            progressCircle.style.strokeDasharray = `${progressPercentage}, 100`;
+            percentageText.textContent = `${Math.round(progressPercentage)}%`;
+        }
+        
+        // 완료된 단계 수 업데이트
+        const completedStepsSpan = document.getElementById('completed-steps');
+        if (completedStepsSpan) {
+            completedStepsSpan.textContent = completedSteps;
+        }
+    }
+}
+
+// 실습 진행상황 로드
+function loadPracticeProgress() {
+    const practiceProgress = JSON.parse(localStorage.getItem('practiceProgress') || '{}');
+    const stepOrder = ['setup', 'html', 'css', 'js', 'deploy'];
+    
+    stepOrder.forEach(stepName => {
+        if (practiceProgress[stepName]) {
+            // 완료된 단계 표시
+            const stepElement = document.getElementById(`step-${stepName}`);
+            if (stepElement) {
+                stepElement.classList.add('completed');
+            }
+        }
+    });
+    
+    // 진행률 업데이트
+    const completedSteps = Object.keys(practiceProgress).length;
+    const totalSteps = stepOrder.length;
+    const progressPercentage = (completedSteps / totalSteps) * 100;
+    
+    const progressCircle = document.querySelector('.circle');
+    const percentageText = document.querySelector('.percentage');
+    
+    if (progressCircle && percentageText) {
+        progressCircle.style.strokeDasharray = `${progressPercentage}, 100`;
+        percentageText.textContent = `${Math.round(progressPercentage)}%`;
+    }
+}
+
+// 페이지 로드 시 실습 진행상황 로드
+document.addEventListener('DOMContentLoaded', function() {
+    loadPracticeProgress();
+    
+    // 프롬프트 모달 외부 클릭 시 닫기
+    const promptModal = document.getElementById('prompt-modal');
+    if (promptModal) {
+        promptModal.addEventListener('click', function(e) {
+            if (e.target === promptModal) {
+                closePrompt();
+            }
+        });
+    }
 }); 
