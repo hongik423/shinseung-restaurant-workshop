@@ -1,0 +1,912 @@
+/* Inter Font Import for Modern Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App Store Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.6;
+  color: #1d1d1f;
+  background: #ffffff;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* App Store Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
+/* App Store Navigation */
+nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* App Store Button Styles */
+.btn {
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: #007AFF;
+  color: white;
+  padding: 12px 24px;
+}
+
+.btn-primary:hover {
+  background: #0051D0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 122, 255, 0.4);
+}
+
+.btn-secondary {
+  background: #34C759;
+  color: white;
+  padding: 12px 24px;
+}
+
+.btn-secondary:hover {
+  background: #28A745;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007AFF;
+  padding: 8px 16px;
+  border: 1px solid #D1D1D6;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 122, 255, 0.04);
+  border-color: #007AFF;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* App Store Card Styles */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #E5E5E7;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  border-color: #D1D1D6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  padding: 0;
+}
+
+/* App Store Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #F2F2F7;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007AFF, #5AC8FA);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* App Store Alert Styles */
+.alert {
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.alert-info {
+  background: #F0F8FF;
+  border: 1px solid #B3D9FF;
+  color: #0066CC;
+}
+
+.alert-warning {
+  background: #FFF9E6;
+  border: 1px solid #FFE066;
+  color: #B8860B;
+}
+
+.alert-error {
+  background: #FFF0F0;
+  border: 1px solid #FFB3B3;
+  color: #CC0000;
+}
+
+.alert-success {
+  background: #F0FFF8;
+  border: 1px solid #A7F3D0;
+  color: #047857;
+}
+
+.alert-success pre {
+  background: #E6FFFA;
+  color: #047857;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  margin: 8px 0 0 0;
+}
+
+/* App Store Code Block */
+.code-block {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 16px 0;
+  border: 1px solid #E5E5E7;
+}
+
+.code-header {
+  background: #F2F2F7;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E7;
+}
+
+.code-header span {
+  color: #1D1D1F;
+  font-weight: 500;
+}
+
+.copy-button {
+  background: #007AFF;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.copy-button:hover {
+  background: #0051D0;
+  color: white;
+}
+
+/* Code content styling */
+.code-block pre {
+  background: #F9F9F9;
+  color: #1D1D1F;
+  padding: 16px;
+  margin: 0;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-block code {
+  color: #1D1D1F;
+  background: transparent;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* App Store Input Styles */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #D1D1D6;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: white;
+  color: #1D1D1F;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007AFF;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.form-input::placeholder {
+  color: #8E8E93;
+}
+
+/* App Store Checklist Styles */
+.checklist-item {
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.checklist-item.completed {
+  opacity: 0.6;
+}
+
+.checklist-item:hover {
+  background: #F9F9F9;
+}
+
+/* App Store Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #E5E5E7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* App Store Colors */
+.text-gray-900 { color: #1D1D1F; }
+.text-gray-600 { color: #6D6D70; }
+.text-gray-500 { color: #8E8E93; }
+.text-gray-400 { color: #AEAEB2; }
+
+.bg-gray-50 { background-color: #F2F2F7; }
+.bg-gray-100 { background-color: #E5E5EA; }
+.bg-gray-200 { background-color: #D1D1D6; }
+
+.border-gray-100 { border-color: #E5E5E7; }
+.border-gray-200 { border-color: #D1D1D6; }
+
+/* App Store Specific Styles */
+.bg-blue-500 { background-color: #007AFF; }
+.bg-blue-600 { background-color: #0051D0; }
+.text-blue-500 { color: #007AFF; }
+.text-blue-600 { color: #0051D0; }
+
+.bg-red-500 { background-color: #FF3B30; }
+.bg-red-600 { background-color: #D70015; }
+
+.bg-green-500 { background-color: #34C759; }
+.bg-green-600 { background-color: #28A745; }
+
+.bg-yellow-400 { background-color: #FFCC02; }
+.text-yellow-400 { color: #FFCC02; }
+
+/* App Store Rounded Corners */
+.rounded-xl { border-radius: 12px; }
+.rounded-2xl { border-radius: 16px; }
+.rounded-3xl { border-radius: 24px; }
+
+/* App Store Shadows */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-xl {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* App Store Transitions */
+.transition-all {
+  transition: all 0.2s ease;
+}
+
+.transition-colors {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-transform {
+  transition: transform 0.2s ease;
+}
+
+/* App Store Hover Effects */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-4px);
+}
+
+.hover\:-translate-y-2:hover {
+  transform: translateY(-8px);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #0051D0;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #D1D1D6;
+}
+
+.hover\:text-blue-600:hover {
+  color: #0051D0;
+}
+
+.hover\:text-gray-900:hover {
+  color: #1D1D1F;
+}
+
+/* App Store Typography Utilities */
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-xs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-base {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text-xl {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-2xl {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text-3xl {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.text-4xl {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+/* App Store Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .text-3xl {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .text-4xl {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* App Store Focus Styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* App Store Backdrop Blur */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* App Store Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F2F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D1D6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AEAEB2;
+}
+
+/* App Store Grid and Flexbox Utilities */
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-2 > * + * {
+  margin-left: 8px;
+}
+
+.space-x-3 > * + * {
+  margin-left: 12px;
+}
+
+.space-x-4 > * + * {
+  margin-left: 16px;
+}
+
+.space-x-6 > * + * {
+  margin-left: 24px;
+}
+
+.space-y-2 > * + * {
+  margin-top: 8px;
+}
+
+.space-y-3 > * + * {
+  margin-top: 12px;
+}
+
+.space-y-4 > * + * {
+  margin-top: 16px;
+}
+
+.space-y-6 > * + * {
+  margin-top: 24px;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
+
+/* App Store Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.max-w-6xl {
+  max-width: 1152px;
+}
+
+.max-w-4xl {
+  max-width: 896px;
+}
+
+.max-w-2xl {
+  max-width: 672px;
+}
+
+.max-w-lg {
+  max-width: 512px;
+}
+
+.max-w-md {
+  max-width: 448px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.px-6 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.px-8 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-8 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.py-12 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.pt-20 {
+  padding-top: 80px;
+}
+
+.pb-8 {
+  padding-bottom: 32px;
+}
+
+.pb-12 {
+  padding-bottom: 48px;
+}
+
+.mb-3 {
+  margin-bottom: 12px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+/* App Store Display Utilities */
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg\:px-8 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* App Store Position Utilities */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* App Store Size Utilities */
+.w-6 {
+  width: 24px;
+}
+
+.w-8 {
+  width: 32px;
+}
+
+.w-16 {
+  width: 64px;
+}
+
+.w-32 {
+  width: 128px;
+}
+
+.w-48 {
+  width: 192px;
+}
+
+.h-3 {
+  height: 12px;
+}
+
+.h-4 {
+  height: 16px;
+}
+
+.h-5 {
+  height: 20px;
+}
+
+.h-6 {
+  height: 24px;
+}
+
+.h-8 {
+  height: 32px;
+}
+
+.h-16 {
+  height: 64px;
+}
+
+.h-32 {
+  height: 128px;
+}
+
+.h-48 {
+  height: 192px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* App Store Text Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+/* App Store Border Utilities */
+.border {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-0 {
+  border-width: 0;
+}
+
+/* App Store Overflow Utilities */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* App Store Cursor Utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* App Store Transform Utilities */
+.transform {
+  transform: var(--tw-transform);
+}
+
+.-translate-y-1\/2 {
+  transform: translateY(-50%);
+}
+
+/* App Store Opacity Utilities */
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.bg-opacity-80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-opacity-100 {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* App Store Flex Utilities */
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+/* App Store Fill Utilities */
+.fill-current {
+  fill: currentColor;
+}
