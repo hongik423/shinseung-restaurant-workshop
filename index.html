@@ -847,56 +847,218 @@ vercel --prod</code></pre>
                     </div>
                     <div class="prompt-body">
                         <div class="prompt-step" id="prompt-setup">
-                            <h4>환경설정 단계 프롬프트</h4>
+                            <h4>🔧 환경설정 단계 - 신승반점 프로젝트 시작</h4>
                             <div class="prompt-text">
                                 <p><strong>Cursor AI에게 이렇게 요청하세요:</strong></p>
                                 <div class="prompt-code">
-                                    <pre>"신승반점 랜딩페이지 프로젝트를 위한 기본 폴더 구조를 만들어줘. 
-index.html, css 폴더, js 폴더, images 폴더가 필요해."</pre>
+                                    <pre>"신승반점(인천 차이나타운 짜장면 원조 맛집) 공식 홈페이지 리뉴얼 프로젝트를 시작하려고 해.
+프로젝트명: shinseung-restaurant
+다음 폴더 구조로 프로젝트를 셋업해줘:
+
+📁 shinseung-restaurant/
+├── 📄 index.html (메인 페이지)
+├── 📁 css/ (스타일 파일)
+├── 📁 js/ (자바스크립트 파일)  
+├── 📁 images/ (이미지 파일)
+└── 📄 README.md (프로젝트 설명)
+
+기본 HTML5 템플릿도 만들어줘."</pre>
+                                </div>
+                                <div class="prompt-tips">
+                                    <h5>💡 추가 요청 팁:</h5>
+                                    <ul>
+                                        <li>"package.json 파일도 만들어서 live-server 설정해줘"</li>
+                                        <li>"Git 초기 설정과 .gitignore 파일도 추가해줘"</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="prompt-step" id="prompt-html">
-                            <h4>HTML 구조 단계 프롬프트</h4>
+                            <h4>📝 HTML 구조 단계 - 신승반점 페이지 구조</h4>
                             <div class="prompt-text">
                                 <p><strong>Cursor AI에게 이렇게 요청하세요:</strong></p>
                                 <div class="prompt-code">
-                                    <pre>"신승반점 랜딩페이지의 기본 HTML 구조를 만들어줘. 
-헤더에 로고와 네비게이션, 메인 콘텐츠 영역, 푸터를 포함해서 
-시맨틱 HTML로 작성해줘."</pre>
+                                    <pre>"신승반점 공식 홈페이지 HTML 구조를 만들어줘. 실제 신승반점 정보를 반영해서:
+
+🏮 헤더 영역:
+- 로고: 신승반점 (짜장면의 원조)
+- 네비게이션: 회사소개, 브랜드소개, 사업영역, 메뉴소개, 지점안내, 커뮤니티센터, 인재채용
+
+🏪 메인 콘텐츠:
+- 히어로 섹션: "인천 차이나타운 짜장면의 원조, 신승반점"
+- 브랜드 소개: 짜장면 이야기, 역사와 전통
+- 사업 영역: 직영사업부, 해외사업부, 프랜차이즈, 제조/연구개발, 교육사업부
+- 대표 메뉴: 짜장면, 짬뽕, 탕수육 등
+- 지점 안내: 매장 찾기
+
+📞 푸터 영역:
+- 고객센터: 032-553-1900
+- 대표이사: 왕애주
+- 사업자등록번호: 577-81-00663
+- 본사주소: 인천광역시 계양구 주부토로516
+- 본점주소: 인천광역시 중구 차이나타운44번길 31-3
+- 이메일: sinsung1611@naver.com
+
+시맨틱 HTML5로 SEO 최적화해서 만들어줘."</pre>
+                                </div>
+                                <div class="prompt-tips">
+                                    <h5>💡 추가 요청 팁:</h5>
+                                    <ul>
+                                        <li>"Open Graph 메타태그도 추가해줘 (SNS 공유용)"</li>
+                                        <li>"구조화된 데이터(JSON-LD)로 식당 정보 마크업해줘"</li>
+                                        <li>"접근성(a11y) 고려해서 aria 속성도 추가해줘"</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="prompt-step" id="prompt-css">
-                            <h4>CSS 스타일 단계 프롬프트</h4>
+                            <h4>🎨 CSS 스타일 단계 - 신승반점 브랜드 디자인</h4>
                             <div class="prompt-text">
                                 <p><strong>Cursor AI에게 이렇게 요청하세요:</strong></p>
                                 <div class="prompt-code">
-                                    <pre>"신승반점 브랜드 컬러(#A08438)를 사용해서 
-반응형 웹사이트 CSS를 만들어줘. 
-모던하고 깔끔한 디자인으로 모바일 친화적으로 만들어줘."</pre>
+                                    <pre>"신승반점 브랜드 아이덴티티를 반영한 CSS 디자인을 만들어줘:
+
+🎨 브랜드 컬러:
+- 메인 컬러: #A08438 (전통 골드)
+- 서브 컬러: #8B0000 (중국 전통 빨강)
+- 배경 컬러: #FFF8DC (따뜻한 크림)
+- 텍스트: #2C2C2C (진한 회색)
+
+🏮 디자인 컨셉:
+- 중국 전통 음식점의 고급스러움
+- 인천 차이나타운의 역사적 분위기
+- 모던하면서도 클래식한 느낌
+- 가족 단위 고객 친화적
+
+📱 반응형 디자인:
+- 모바일 퍼스트 접근
+- 태블릿, 데스크톱 최적화
+- 터치 친화적 버튼 크기
+
+🎯 핵심 요소:
+- 헤더: 고정형 네비게이션
+- 히어로: 매력적인 짜장면 이미지 배경
+- 카드형 메뉴 소개
+- 지점 정보: 지도 연동 준비
+- 푸터: 연락처 정보 강조
+
+CSS Grid, Flexbox 활용해서 모던한 레이아웃으로 만들어줘."</pre>
+                                </div>
+                                <div class="prompt-tips">
+                                    <h5>💡 추가 요청 팁:</h5>
+                                    <ul>
+                                        <li>"CSS 변수(Custom Properties) 사용해서 유지보수 쉽게 해줘"</li>
+                                        <li>"다크모드 지원도 추가해줘"</li>
+                                        <li>"애니메이션 효과로 사용자 경험 향상시켜줘"</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="prompt-step" id="prompt-js">
-                            <h4>JavaScript 기능 단계 프롬프트</h4>
+                            <h4>⚡ JavaScript 기능 단계 - 인터랙티브 기능</h4>
                             <div class="prompt-text">
                                 <p><strong>Cursor AI에게 이렇게 요청하세요:</strong></p>
                                 <div class="prompt-code">
-                                    <pre>"모바일 햄버거 메뉴, 스크롤 이벤트, 
-스무스 스크롤링 기능을 추가해줘. 
-사용자 경험을 향상시키는 인터랙티브 요소들을 포함해줘."</pre>
+                                    <pre>"신승반점 홈페이지에 실용적인 JavaScript 기능들을 추가해줘:
+
+🍜 핵심 기능:
+1. 매장 찾기 기능
+   - 지점별 정보 표시
+   - 영업시간, 전화번호, 주소
+   - 네이버 지도 API 연동 준비
+
+2. 메뉴 갤러리
+   - 이미지 슬라이더
+   - 메뉴별 상세 정보 모달
+   - 가격 정보 표시
+
+3. 온라인 주문 연동
+   - 배달앱 링크 (배달의민족, 요기요 등)
+   - 전화주문 바로가기
+
+4. 고객 서비스
+   - 고객센터 전화 연결 (tel: 링크)
+   - 카카오톡 상담 연결
+   - FAQ 아코디언
+
+📱 사용자 경험:
+- 모바일 햄버거 메뉴
+- 스크롤 시 헤더 숨김/표시
+- 부드러운 스크롤 애니메이션
+- 로딩 스피너
+- 이미지 지연 로딩 (Lazy Loading)
+
+🔍 SEO & 성능:
+- 구글 애널리틱스 연동 준비
+- 페이지 로딩 속도 최적화
+- 이미지 압축 및 WebP 지원
+
+바닐라 JavaScript로 만들어줘 (라이브러리 최소화)."</pre>
+                                </div>
+                                <div class="prompt-tips">
+                                    <h5>💡 추가 요청 팁:</h5>
+                                    <ul>
+                                        <li>"PWA(Progressive Web App) 기능도 추가해줘"</li>
+                                        <li>"다국어 지원 (한국어/중국어/영어) 기능 준비해줘"</li>
+                                        <li>"온라인 예약 시스템 기본 구조 만들어줘"</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="prompt-step" id="prompt-deploy">
-                            <h4>배포 단계 프롬프트</h4>
+                            <h4>🚀 배포 단계 - 신승반점 홈페이지 런칭</h4>
                             <div class="prompt-text">
                                 <p><strong>Cursor AI에게 이렇게 요청하세요:</strong></p>
                                 <div class="prompt-code">
-                                    <pre>"GitHub에 코드를 업로드하고 
-Vercel로 자동 배포하는 방법을 단계별로 안내해줘. 
-도메인 연결과 SSL 설정도 포함해서 설명해줘."</pre>
+                                    <pre>"신승반점 홈페이지를 실제 운영 환경에 배포하는 과정을 안내해줘:
+
+🌐 배포 전략:
+1. GitHub 저장소 설정
+   - 저장소명: shinseung-restaurant-official
+   - README.md 업데이트 (프로젝트 소개)
+   - 라이선스 설정
+
+2. Vercel 배포
+   - 프로덕션 환경 설정
+   - 환경 변수 관리
+   - 자동 배포 설정
+
+3. 도메인 연결
+   - 커스텀 도메인 설정 방법
+   - SSL 인증서 자동 설정
+   - DNS 설정 가이드
+
+📊 성능 최적화:
+- 이미지 최적화 (WebP, 압축)
+- CSS/JS 압축 (Minification)
+- CDN 설정
+- 캐싱 전략
+
+🔍 SEO 설정:
+- Google Search Console 등록
+- 네이버 웹마스터도구 등록
+- sitemap.xml 생성
+- robots.txt 설정
+
+📈 분석 도구:
+- Google Analytics 4 설정
+- 네이버 애널리틱스 연동
+- 성능 모니터링 설정
+
+🔒 보안 설정:
+- HTTPS 강제 리다이렉트
+- 보안 헤더 설정
+- 스팸 방지 설정
+
+실제 운영 사이트로 사용할 수 있는 수준으로 완성해줘."</pre>
+                                </div>
+                                <div class="prompt-tips">
+                                    <h5>💡 추가 요청 팁:</h5>
+                                    <ul>
+                                        <li>"백업 및 복구 전략도 수립해줘"</li>
+                                        <li>"모니터링 및 알림 시스템 설정해줘"</li>
+                                        <li>"A/B 테스트 환경 구축 방법 알려줘"</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

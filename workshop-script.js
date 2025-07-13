@@ -185,51 +185,198 @@ npm --version</code></pre>
             `
         },
         'api': {
-            title: 'API 키 설정 가이드',
+            title: 'AI 도구 API 키 설정 가이드',
             content: `
                 <div class="step-detail">
-                    <h4>🔑 OpenAI API 설정</h4>
-                    <ol>
-                        <li><a href="https://platform.openai.com" target="_blank">https://platform.openai.com</a> 접속</li>
-                        <li>계정 가입 또는 로그인</li>
-                        <li>우측 상단 프로필 클릭 → "API keys" 선택</li>
-                        <li>"Create new secret key" 클릭</li>
-                        <li>키 이름 입력 후 "Create secret key" 클릭</li>
-                        <li><strong>중요:</strong> API 키를 안전한 곳에 복사하여 저장</li>
-                    </ol>
-                    
-                    <h4>🧠 Google Gemini API 설정</h4>
-                    <ol>
-                        <li><a href="https://ai.google.dev" target="_blank">https://ai.google.dev</a> 접속</li>
-                        <li>Google 계정으로 로그인</li>
-                        <li>"Get API key" 클릭</li>
-                        <li>프로젝트 선택 또는 새 프로젝트 생성</li>
-                        <li>"Create API key" 클릭</li>
-                        <li>API 키 복사하여 저장</li>
-                    </ol>
-                    
-                    <h4>🤖 Claude API 설정</h4>
-                    <ol>
-                        <li><a href="https://console.anthropic.com" target="_blank">https://console.anthropic.com</a> 접속</li>
-                        <li>계정 가입 또는 로그인</li>
-                        <li>"API Keys" 메뉴 선택</li>
-                        <li>"Create Key" 클릭</li>
-                        <li>키 이름 입력 후 생성</li>
-                        <li>API 키 복사하여 저장</li>
-                    </ol>
-                    
-                    <h4>⚙️ Cursor에 API 키 등록</h4>
-                    <ol>
-                        <li>Cursor 실행</li>
-                        <li>Ctrl + Shift + P (Windows) 또는 Cmd + Shift + P (Mac) 입력</li>
-                        <li>"Cursor Settings" 검색하여 선택</li>
-                        <li>"Models" 탭 선택</li>
-                        <li>각 API 키 입력 후 "Verify" 버튼으로 확인</li>
-                    </ol>
-                    
-                    <div class="alert alert-warning">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <strong>주의:</strong> API 키는 절대 공유하지 마세요. 개인 정보와 같습니다.
+                    <div class="api-intro">
+                        <h3>🤖 AI 개발 도구 활용을 위한 API 키 설정</h3>
+                        <p>Cursor AI의 모든 기능을 사용하기 위해 다음 AI 서비스의 API 키가 필요합니다. <strong>무료 크레딧</strong>이 제공되므로 부담없이 시작할 수 있습니다!</p>
+                    </div>
+
+                    <div class="api-service">
+                        <div class="api-header">
+                            <h4>🔥 OpenAI API (ChatGPT) - 가장 인기!</h4>
+                            <span class="api-badge recommended">추천</span>
+                        </div>
+                        <div class="api-benefits">
+                            <p>✨ <strong>무료 크레딧:</strong> 신규 가입 시 $5 제공 (3개월간 사용 가능)</p>
+                            <p>🎯 <strong>장점:</strong> 가장 정확한 코드 생성, 한국어 지원 우수</p>
+                        </div>
+                        <div class="api-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <a href="https://platform.openai.com/api-keys" target="_blank" class="api-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        OpenAI API 키 발급 페이지 바로가기
+                                    </a>
+                                    <p class="step-desc">클릭하면 API 키 생성 페이지로 바로 이동됩니다</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <p><strong>"+ Create new secret key"</strong> 버튼 클릭</p>
+                                    <p class="step-desc">페이지 우측 상단에 있는 녹색 버튼입니다</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <p>키 이름 입력: <code>cursor-workshop</code></p>
+                                    <p class="step-desc">나중에 구분하기 쉽도록 의미있는 이름을 입력하세요</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">4</span>
+                                <div class="step-content">
+                                    <p><strong>API 키 복사 및 저장</strong> ⚠️ <span class="warning">한번만 표시됩니다!</span></p>
+                                    <p class="step-desc">메모장이나 안전한 곳에 반드시 저장하세요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-service">
+                        <div class="api-header">
+                            <h4>🧠 Google Gemini API - 무료 제공!</h4>
+                            <span class="api-badge free">무료</span>
+                        </div>
+                        <div class="api-benefits">
+                            <p>🆓 <strong>완전 무료:</strong> 월 60회 요청 무료 제공</p>
+                            <p>⚡ <strong>장점:</strong> 빠른 응답 속도, 최신 정보 반영</p>
+                        </div>
+                        <div class="api-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <a href="https://aistudio.google.com/app/apikey" target="_blank" class="api-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Google AI Studio API 키 발급 바로가기
+                                    </a>
+                                    <p class="step-desc">Google 계정으로 로그인 후 즉시 API 키 생성 가능</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <p><strong>"Create API key"</strong> 클릭</p>
+                                    <p class="step-desc">파란색 버튼을 클릭하면 즉시 키가 생성됩니다</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <p>생성된 API 키 복사하여 저장</p>
+                                    <p class="step-desc">복사 버튼을 클릭하여 안전한 곳에 저장하세요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-service">
+                        <div class="api-header">
+                            <h4>🤖 Claude API (Anthropic)</h4>
+                            <span class="api-badge premium">프리미엄</span>
+                        </div>
+                        <div class="api-benefits">
+                            <p>💳 <strong>무료 크레딧:</strong> 신규 가입 시 $5 제공</p>
+                            <p>🎓 <strong>장점:</strong> 긴 문서 분석, 교육용 설명 우수</p>
+                        </div>
+                        <div class="api-steps">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <a href="https://console.anthropic.com/settings/keys" target="_blank" class="api-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Claude API 키 발급 페이지 바로가기
+                                    </a>
+                                    <p class="step-desc">계정 생성 후 즉시 API 키 생성 가능</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <p><strong>"Create Key"</strong> 버튼 클릭</p>
+                                    <p class="step-desc">우측 상단의 주황색 버튼입니다</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <p>키 이름 입력 후 생성</p>
+                                    <p class="step-desc">예: <code>cursor-development</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cursor-setup">
+                        <h4>⚙️ Cursor에 API 키 등록하기</h4>
+                        <div class="setup-steps">
+                            <div class="setup-step">
+                                <div class="setup-icon">1️⃣</div>
+                                <div class="setup-content">
+                                    <h5>Cursor 설정 열기</h5>
+                                    <div class="keyboard-shortcut">
+                                        <span class="key">Ctrl</span> + <span class="key">Shift</span> + <span class="key">P</span>
+                                        <span class="os-note">(Mac: <span class="key">Cmd</span> + <span class="key">Shift</span> + <span class="key">P</span>)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setup-step">
+                                <div class="setup-icon">2️⃣</div>
+                                <div class="setup-content">
+                                    <h5>설정 검색</h5>
+                                    <p><code>Cursor Settings</code> 입력 후 <kbd>Enter</kbd></p>
+                                </div>
+                            </div>
+                            <div class="setup-step">
+                                <div class="setup-icon">3️⃣</div>
+                                <div class="setup-content">
+                                    <h5>Models 탭 선택</h5>
+                                    <p>왼쪽 메뉴에서 <strong>"Models"</strong> 클릭</p>
+                                </div>
+                            </div>
+                            <div class="setup-step">
+                                <div class="setup-icon">4️⃣</div>
+                                <div class="setup-content">
+                                    <h5>API 키 입력</h5>
+                                    <p>각 서비스별 API 키 입력 후 <strong>"Verify"</strong> 버튼으로 확인</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="api-tips">
+                        <h4>💡 유용한 팁</h4>
+                        <div class="tip-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h5>보안</h5>
+                                <p>API 키는 절대 공유하지 마세요. GitHub에 업로드하지 마세요.</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <h5>비용</h5>
+                                <p>무료 크레딧으로 충분히 학습할 수 있습니다. 걱정하지 마세요!</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-sync-alt"></i>
+                                <h5>교체</h5>
+                                <p>언제든지 새로운 키로 교체할 수 있습니다.</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <h5>추천</h5>
+                                <p>처음엔 OpenAI만 설정해도 충분합니다!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>설정 완료 후:</strong> Cursor에서 Tab 키를 눌러 AI 자동완성을 체험해보세요!
                     </div>
                 </div>
             `
