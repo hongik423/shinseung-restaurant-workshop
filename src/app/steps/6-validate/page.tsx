@@ -271,6 +271,7 @@ function FunctionalityStep({ onComplete }: { onComplete: () => void }) {
         <h4 className="text-lg font-semibold">🧪 기능 테스트 체크리스트</h4>
 
         <CheckList
+          title="기능 테스트 체크리스트"
           items={[
             { id: 'navigation', text: '네비게이션 메뉴 동작 확인' },
             { id: 'mobile-menu', text: '모바일 햄버거 메뉴 테스트' },
@@ -281,8 +282,8 @@ function FunctionalityStep({ onComplete }: { onComplete: () => void }) {
             { id: 'animations', text: '애니메이션 효과 확인' },
             { id: 'accessibility', text: '접근성 기능 테스트' }
           ]}
-          onComplete={(completed) => {
-            if (completed.length >= 6) {
+          onComplete={(completed, total) => {
+            if (completed >= 6) {
               onComplete();
             }
           }}
@@ -333,6 +334,7 @@ function DesignStep({ onComplete }: { onComplete: () => void }) {
         </div>
 
         <CheckList
+          title="디자인 검증 체크리스트"
           items={[
             { id: 'color-scheme', text: '색상 테마 일관성 확인' },
             { id: 'typography', text: '폰트 크기 및 가독성 검증' },
@@ -341,8 +343,8 @@ function DesignStep({ onComplete }: { onComplete: () => void }) {
             { id: 'icon-consistency', text: '아이콘 스타일 일관성 확인' },
             { id: 'spacing', text: '여백 및 간격 최적화 확인' }
           ]}
-          onComplete={(completed) => {
-            if (completed.length >= 5) {
+          onComplete={(completed, total) => {
+            if (completed >= 5) {
               onComplete();
             }
           }}
@@ -419,8 +421,8 @@ npm run analyze
             { id: 'caching', text: '캐싱 전략 적용' },
             { id: 'mobile-performance', text: '모바일 성능 최적화' }
           ]}
-          onComplete={(completed) => {
-            if (completed.length >= 4) {
+          onComplete={(completed, total) => {
+            if (completed >= 4) {
               onComplete();
             }
           }}
@@ -484,8 +486,8 @@ git push -u origin main`}
             { id: 'ssl-check', text: 'HTTPS 보안 인증서 확인' },
             { id: 'performance-live', text: '실제 환경 성능 테스트' }
           ]}
-          onComplete={(completed) => {
-            if (completed.length >= 5) {
+          onComplete={(completed, total) => {
+            if (completed >= 5) {
               onComplete();
             }
           }}
@@ -586,8 +588,8 @@ function CertificationStep({ onComplete }: { onComplete: () => void }) {
             { id: 'portfolio', text: '포트폴리오에 추가' },
             { id: 'share', text: '완성작 공유' }
           ]}
-          onComplete={(completed) => {
-            if (completed.length >= 3) {
+          onComplete={(completed, total) => {
+            if (completed >= 3) {
               onComplete();
             }
           }}

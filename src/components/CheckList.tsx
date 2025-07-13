@@ -15,7 +15,7 @@ interface CheckListItem {
 }
 
 interface CheckListProps {
-  title: string;
+  title?: string;
   items: CheckListItem[];
   storageKey?: string;
   showProgress?: boolean;
@@ -114,30 +114,55 @@ export default function CheckList({
   return (
     <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
       {/* 헤더 */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold text-gray-900 flex items-center">
-          <CheckSquare className="h-6 w-6 mr-2 text-red-600" />
-          {title}
-        </h3>
-        
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={toggleCompleted}
-            className="btn-secondary btn-sm"
-            title={showCompleted ? '완료된 항목 숨기기' : '완료된 항목 보기'}
-          >
-            {showCompleted ? '완료항목 숨기기' : '전체보기'}
-          </button>
+      {title && (
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-bold text-gray-900 flex items-center">
+            <CheckSquare className="h-6 w-6 mr-2 text-red-600" />
+            {title}
+          </h3>
           
-          <button
-            onClick={resetAll}
-            className="btn-outline btn-sm"
-            title="모든 체크 해제"
-          >
-            <RotateCcw className="h-4 w-4" />
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleCompleted}
+              className="btn-secondary btn-sm"
+              title={showCompleted ? '완료된 항목 숨기기' : '완료된 항목 보기'}
+            >
+              {showCompleted ? '완료항목 숨기기' : '전체보기'}
+            </button>
+            
+            <button
+              onClick={resetAll}
+              className="btn-outline btn-sm"
+              title="모든 체크 해제"
+            >
+              <RotateCcw className="h-4 w-4" />
+            </button>
+          </div>
         </div>
-      </div>
+      )}
+      
+      {/* 타이틀 없을 때 간단한 컨트롤 */}
+      {!title && (
+        <div className="flex justify-end mb-4">
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleCompleted}
+              className="btn-secondary btn-sm"
+              title={showCompleted ? '완료된 항목 숨기기' : '완료된 항목 보기'}
+            >
+              {showCompleted ? '완료항목 숨기기' : '전체보기'}
+            </button>
+            
+            <button
+              onClick={resetAll}
+              className="btn-outline btn-sm"
+              title="모든 체크 해제"
+            >
+              <RotateCcw className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* 진행률 표시 */}
       {showProgress && (

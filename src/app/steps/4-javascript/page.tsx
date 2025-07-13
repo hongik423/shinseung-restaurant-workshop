@@ -1033,6 +1033,7 @@ document.addEventListener('DOMContentLoaded', () => {
             />
 
             <CheckList
+              title="DOM 조작 체크리스트"
               items={[
                 { id: 'dom-elements', text: '요소 선택 및 조작 방법 이해' },
                 { id: 'content-update', text: '텍스트 및 HTML 내용 동적 변경' },
@@ -1041,8 +1042,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 'event-handling', text: '이벤트 리스너 등록 및 처리' },
                 { id: 'animation-effects', text: '부드러운 애니메이션 효과 구현' }
               ]}
-              onComplete={(completed) => {
-                if (completed.length >= 4) {
+              onComplete={(completed, total) => {
+                if (completed >= 4) {
                   onComplete();
                 }
               }}
@@ -1409,6 +1410,7 @@ document.addEventListener('DOMContentLoaded', () => {
             />
 
             <CheckList
+              title="모바일 최적화 체크리스트"
               items={[
                 { id: 'touch-targets', text: '터치 타겟 크기 최적화 (44px 이상)' },
                 { id: 'gesture-support', text: '스와이프 제스처 지원' },
@@ -1417,8 +1419,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 'orientation-handling', text: '화면 회전 대응' },
                 { id: 'performance-optimization', text: '모바일 성능 최적화' }
               ]}
-              onComplete={(completed) => {
-                if (completed.length >= 4) {
+              onComplete={(completed, total) => {
+                if (completed >= 4) {
                   onComplete();
                 }
               }}
@@ -1834,6 +1836,7 @@ document.addEventListener('DOMContentLoaded', () => {
             />
 
             <CheckList
+              title="유효성 검증 체크리스트"
               items={[
                 { id: 'input-validation', text: '입력 값 유효성 검사' },
                 { id: 'real-time-feedback', text: '실시간 피드백 제공' },
@@ -1842,8 +1845,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 'form-submission', text: '폼 제출 처리' },
                 { id: 'success-feedback', text: '성공 피드백 표시' }
               ]}
-              onComplete={(completed) => {
-                if (completed.length >= 4) {
+              onComplete={(completed, total) => {
+                if (completed >= 4) {
                   onComplete();
                 }
               }}
@@ -2328,6 +2331,7 @@ document.addEventListener('DOMContentLoaded', () => {
             />
 
             <CheckList
+              title="성능 최적화 체크리스트"
               items={[
                 { id: 'lazy-loading', text: '지연 로딩 구현' },
                 { id: 'code-splitting', text: '코드 스플리팅 적용' },
@@ -2336,8 +2340,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 'bundle-optimization', text: '번들 크기 최적화' },
                 { id: 'performance-monitoring', text: '성능 모니터링 설정' }
               ]}
-              onComplete={(completed) => {
-                if (completed.length >= 4) {
+              onComplete={(completed, total) => {
+                if (completed >= 4) {
                   onComplete();
                 }
               }}
