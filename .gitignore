@@ -44,3 +44,4 @@ build/
 # 임시 파일들
 *.tmp
 *.temp 
+.vercel
