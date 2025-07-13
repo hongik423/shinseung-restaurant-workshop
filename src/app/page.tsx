@@ -46,7 +46,7 @@ const ClientOnlyStats = dynamic(() => Promise.resolve(function ClientOnlyStats()
 export default function Home() {
   const [email, setEmail] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+  const [completedSteps] = useState<number[]>([]);
   const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -314,7 +314,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredSteps.map((step, index) => {
+            {filteredSteps.map((step) => {
               const Icon = step.icon;
               const isCompleted = completedSteps.includes(step.id);
               

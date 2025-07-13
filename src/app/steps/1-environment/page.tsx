@@ -634,7 +634,7 @@ function APIStep({ onComplete }: { onComplete: () => void }) {
                 <ol className="mt-2 space-y-1 list-decimal list-inside">
                   <li>위의 Claude API 키 발급 링크 클릭</li>
                   <li>Anthropic 계정 생성 또는 로그인</li>
-                  <li>"Create Key" 버튼 클릭하여 새 API 키 생성</li>
+                  <li>&ldquo;Create Key&rdquo; 버튼 클릭하여 새 API 키 생성</li>
                   <li>생성된 키를 안전한 곳에 복사하여 저장</li>
                   <li>Cursor 설정에서 Claude API 키 입력</li>
                 </ol>

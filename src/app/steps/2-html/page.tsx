@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react/no-unescaped-entities */
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -10,13 +12,8 @@ import {
   AlertCircle,
   Home,
   Menu,
-  Image,
   FileText,
-  Users,
-  Phone,
-  ChevronRight,
   Code,
-  Eye,
   Lightbulb,
   MessageSquare
 } from 'lucide-react';
@@ -85,12 +82,6 @@ export default function HTMLStructure() {
   const nextStep = () => {
     if (activeStep < htmlSteps.length - 1) {
       setActiveStep(activeStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    if (activeStep > 0) {
-      setActiveStep(activeStep - 1);
     }
   };
 
@@ -580,12 +571,12 @@ function FoundationStep({ onComplete }: { onComplete: () => void }) {
             <div class="reviews-container">
                 <div class="review-item">
                     <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p>"정말 맛있어요! 어릴 적 할머니가 해주시던 짜장면 맛이 나네요."</p>
+                    <p>&ldquo;정말 맛있어요! 어릴 적 할머니가 해주시던 짜장면 맛이 나네요.&rdquo;</p>
                     <span class="reviewer">- 김○○님</span>
                 </div>
                 <div class="review-item">
                     <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <p>"120년 전통이 느껴지는 깊은 맛. 인천 가면 꼭 들르는 곳!"</p>
+                    <p>&ldquo;120년 전통이 느껴지는 깊은 맛. 인천 가면 꼭 들르는 곳!&rdquo;</p>
                     <span class="reviewer">- 박○○님</span>
                 </div>
             </div>
