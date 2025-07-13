@@ -1,0 +1,12 @@
+{
+  "name": "shinseung-restaurant",
+  "version": "1.0.0",
+  "description": "50년 전통의 중국요리 전문점 \"신승반점\"의 공식 랜딩페이지입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
