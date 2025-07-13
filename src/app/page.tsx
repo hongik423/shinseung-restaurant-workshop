@@ -242,12 +242,11 @@ export default function Home() {
                     신규 출시
                   </div>
                   <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                    Next-Level<br />
-                    Web Development
+                    신승반점 실습교재<br />
+                    웹개발 완전정복 가이드
                   </h1>
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Cursor AI를 활용한 웹개발 완전정복 가이드.<br />
-                    초보자도 8-10시간이면 전문적인 웹사이트를 완성할 수 있습니다.
+                    1905년부터 이어진 전통의 맛처럼, 전통적인 웹 개발 기술을 현대적인 방식으로 배워보세요.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -277,6 +276,21 @@ export default function Home() {
             
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-transparent rounded-full blur-3xl opacity-30"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Link Section */}
+      <section id="courses" className="pb-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">학습 과정</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+            <Link href="/steps/1-environment" className="course-link">개발환경 구축</Link>
+            <Link href="/steps/2-html" className="course-link">HTML5 구조 설계</Link>
+            <Link href="/steps/3-css" className="course-link">CSS3 스타일링</Link>
+            <Link href="/steps/4-javascript" className="course-link">JavaScript 기능</Link>
+            <Link href="/steps/5-deploy" className="course-link">배포 및 운영</Link>
+            <Link href="/steps/6-validate" className="course-link">완성도 검증</Link>
           </div>
         </div>
       </section>
